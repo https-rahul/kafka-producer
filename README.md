@@ -12,7 +12,7 @@ This is a simple Spring Boot application that integrates with Apache Kafka for s
 ## Project Structure
 
 - **controller**: Contains the REST controllers for handling HTTP requests.
-  - `HomeController`: Handles general requests.
+  - `HomeController`: Handles '/' requests.
   - `KafkaController`: Provides endpoints for sending messages to Kafka.
   
 - **model**: Contains the data model for the application.

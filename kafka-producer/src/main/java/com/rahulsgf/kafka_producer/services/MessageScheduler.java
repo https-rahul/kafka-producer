@@ -5,9 +5,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 @Service
 @Slf4j
 public class MessageScheduler {
+
+    private int messageCount = 0;
 
     @Autowired
     private KafkaProducerService kafkaProducerService;
@@ -16,10 +21,16 @@ public class MessageScheduler {
 
     @Scheduled(fixedRate = 2000)
     public void sendScheduledMessage() {
+
         if (isSchedulerRunning) {
-            String message = "Automated message " + System.currentTimeMillis();
+
+            long currentMillis = System.currentTimeMillis();
+            Date currentDate = new Date(currentMillis);
+
+            String message = "Automated message count: "+messageCount++ ;
+
             kafkaProducerService.sendMessage(message);
-            log.info("Automated message sent: " + message);
+            log.info("Automated message sent with count {} @ {}", messageCount, currentDate);
         }
     }
 
@@ -40,3 +51,5 @@ public class MessageScheduler {
         return isSchedulerRunning;
     }
 }
+
+// TODO: create test class

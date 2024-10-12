@@ -23,7 +23,7 @@ This is a simple Spring Boot application that integrates with Apache Kafka for s
 
 ## Technologies Used
 
-- Java 17
+- Java 21
 - Spring Boot 3.x
 - Apache Kafka
 - Docker

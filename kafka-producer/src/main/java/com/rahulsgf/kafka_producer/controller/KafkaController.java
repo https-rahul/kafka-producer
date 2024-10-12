@@ -1,6 +1,6 @@
 package com.rahulsgf.kafka_producer.controller;
 
-import com.rahulsgf.kafka_producer.models.MessageRequest;
+import com.rahulsgf.kafka_producer.model.MessageRequest;
 import com.rahulsgf.kafka_producer.services.KafkaProducerService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

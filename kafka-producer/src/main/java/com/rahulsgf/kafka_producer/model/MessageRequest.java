@@ -1,8 +1,6 @@
-package com.rahulsgf.kafka_producer.models;
-
+package com.rahulsgf.kafka_producer.model;
 
 import lombok.Data;
-
 
 @Data
 public class MessageRequest {

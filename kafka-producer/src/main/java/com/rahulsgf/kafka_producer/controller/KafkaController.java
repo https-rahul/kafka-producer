@@ -6,6 +6,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
+
 @RestController
 @Slf4j
 public class KafkaController {
@@ -18,8 +20,15 @@ public class KafkaController {
 
         String message = messageRequest.getMessage();
 
-        log.info("Received request to send message: {}", message);
+        long currentMillis = System.currentTimeMillis();
+        Date receiveTime = new Date(currentMillis);
+        log.info("Received message:  //{}// at: {}", message, receiveTime);
+
         kafkaProducerService.sendMessage(message);
+
+        Date afterPushTime = new Date(currentMillis);
+        log.info("Message successfully pushed to Kafka topic at: {}", afterPushTime);
+
         return "Message sent to Kafka successfully!";
     }
 }

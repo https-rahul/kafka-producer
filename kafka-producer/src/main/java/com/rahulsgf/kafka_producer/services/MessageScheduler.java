@@ -25,12 +25,12 @@ public class MessageScheduler {
         if (isSchedulerRunning) {
 
             long currentMillis = System.currentTimeMillis();
-            Date currentDate = new Date(currentMillis);
+            Date currentTimeStamp = new Date(currentMillis);
 
             String message = "Automated message count: "+messageCount++ ;
 
             kafkaProducerService.sendMessage(message);
-            log.info("Automated message sent with count {} @ {}", messageCount, currentDate);
+            log.info("Automated message sent with count {} @ {}", messageCount, currentTimeStamp);
         }
     }
 

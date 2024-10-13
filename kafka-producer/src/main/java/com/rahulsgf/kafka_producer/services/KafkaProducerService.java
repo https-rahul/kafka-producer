@@ -12,8 +12,11 @@ public class KafkaProducerService {
     private KafkaTemplate<String, String> kafkaTemplate;
 
     public void sendMessage(String message) {
-        log.info("Producing message: {}", message);
+
+        log.info("Producing message in KafkaProducerService()");
+
         kafkaTemplate.send("test-topic", message);
+
         log.info("Message sent successfully to Kafka");
     }
 }

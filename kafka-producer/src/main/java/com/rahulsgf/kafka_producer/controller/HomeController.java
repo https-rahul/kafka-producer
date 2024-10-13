@@ -11,6 +11,6 @@ public class HomeController {
 
     @GetMapping("/")
     public String home() {
-        return "Application started: Welcome home!";
+        return "Application started: Welcome user!";
     }
 }

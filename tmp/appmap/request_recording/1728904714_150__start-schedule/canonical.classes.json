@@ -1,0 +1,4 @@
+[
+  "com/rahulsgf/kafka_producer/controller/SchedulerController",
+  "com/rahulsgf/kafka_producer/services/MessageScheduler"
+]

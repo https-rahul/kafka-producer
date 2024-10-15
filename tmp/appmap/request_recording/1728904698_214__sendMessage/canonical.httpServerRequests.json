@@ -1,0 +1,7 @@
+[
+  {
+    "route": "POST /sendMessage",
+    "parameters": "()",
+    "status": 200
+  }
+]

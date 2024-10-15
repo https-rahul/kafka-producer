@@ -1,0 +1,4 @@
+[
+  "com/rahulsgf/kafka_producer/controller/KafkaController",
+  "com/rahulsgf/kafka_producer/services/KafkaProducerService"
+]

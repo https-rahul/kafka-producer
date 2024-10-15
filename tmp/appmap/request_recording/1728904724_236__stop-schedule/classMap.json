@@ -1,0 +1,66 @@
+[
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "name": "stopMessageScheduler",
+                        "type": "function",
+                        "static": false,
+                        "location": "kafka-producer/src/main/java/com/rahulsgf/kafka_producer/controller/SchedulerController.java:28"
+                      }
+                    ],
+                    "name": "SchedulerController",
+                    "type": "class"
+                  }
+                ],
+                "name": "controller",
+                "type": "package"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "name": "stopScheduler",
+                        "type": "function",
+                        "static": false,
+                        "location": "kafka-producer/src/main/java/com/rahulsgf/kafka_producer/services/MessageScheduler.java:44"
+                      }
+                    ],
+                    "name": "MessageScheduler",
+                    "type": "class"
+                  }
+                ],
+                "name": "services",
+                "type": "package"
+              }
+            ],
+            "name": "kafka_producer",
+            "type": "package"
+          }
+        ],
+        "name": "rahulsgf",
+        "type": "package"
+      }
+    ],
+    "name": "com",
+    "type": "package"
+  },
+  {
+    "type": "http",
+    "name": "HTTP server requests",
+    "children": [
+      {
+        "type": "route",
+        "name": "GET /stop-schedule"
+      }
+    ]
+  }
+]

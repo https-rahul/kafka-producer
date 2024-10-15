@@ -1,0 +1,66 @@
+[
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "name": "sendMessage",
+                        "type": "function",
+                        "static": false,
+                        "location": "kafka-producer/src/main/java/com/rahulsgf/kafka_producer/services/KafkaProducerService.java:15"
+                      }
+                    ],
+                    "name": "KafkaProducerService",
+                    "type": "class"
+                  }
+                ],
+                "name": "services",
+                "type": "package"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "name": "sendMessageToKafka",
+                        "type": "function",
+                        "static": false,
+                        "location": "kafka-producer/src/main/java/com/rahulsgf/kafka_producer/controller/KafkaController.java:19"
+                      }
+                    ],
+                    "name": "KafkaController",
+                    "type": "class"
+                  }
+                ],
+                "name": "controller",
+                "type": "package"
+              }
+            ],
+            "name": "kafka_producer",
+            "type": "package"
+          }
+        ],
+        "name": "rahulsgf",
+        "type": "package"
+      }
+    ],
+    "name": "com",
+    "type": "package"
+  },
+  {
+    "type": "http",
+    "name": "HTTP server requests",
+    "children": [
+      {
+        "type": "route",
+        "name": "POST /sendMessage"
+      }
+    ]
+  }
+]

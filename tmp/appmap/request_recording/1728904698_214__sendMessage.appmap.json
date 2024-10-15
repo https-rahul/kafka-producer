@@ -1,0 +1,200 @@
+{
+  "events": [
+    {
+      "event": "call",
+      "http_server_request": {
+        "headers": {
+          "content-length": "38",
+          "postman-token": "1e3e290c-79a2-4c34-b795-2fa2bc2475d1",
+          "host": "localhost:8080",
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "cache-control": "no-cache",
+          "accept-encoding": "gzip, deflate, br",
+          "user-agent": "PostmanRuntime/7.42.0",
+          "accept": "*/*"
+        },
+        "normalized_path_info": "/sendMessage",
+        "path_info": "/sendMessage",
+        "protocol": "HTTP/1.1",
+        "request_method": "POST"
+      },
+      "id": 1,
+      "thread_id": 71
+    },
+    {
+      "defined_class": "com.rahulsgf.kafka_producer.controller.KafkaController",
+      "event": "call",
+      "id": 2,
+      "lineno": 19,
+      "method_id": "sendMessageToKafka",
+      "parameters": [
+        {
+          "class": "com.rahulsgf.kafka_producer.model.MessageRequest",
+          "kind": "req",
+          "name": "messageRequest",
+          "object_id": 936842356,
+          "value": "MessageRequest(message=test message 15)"
+        }
+      ],
+      "path": "kafka-producer/src/main/java/com/rahulsgf/kafka_producer/controller/KafkaController.java",
+      "receiver": {
+        "class": "com.rahulsgf.kafka_producer.controller.KafkaController",
+        "object_id": 1099766509,
+        "value": "com.rahulsgf.kafka_producer.controller.KafkaController@418d1aed"
+      },
+      "static": false,
+      "thread_id": 71
+    },
+    {
+      "defined_class": "com.rahulsgf.kafka_producer.services.KafkaProducerService",
+      "event": "call",
+      "id": 3,
+      "lineno": 15,
+      "method_id": "sendMessage",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "message",
+          "object_id": 103196618,
+          "value": "test message 15"
+        }
+      ],
+      "path": "kafka-producer/src/main/java/com/rahulsgf/kafka_producer/services/KafkaProducerService.java",
+      "receiver": {
+        "class": "com.rahulsgf.kafka_producer.services.KafkaProducerService",
+        "object_id": 1299894394,
+        "value": "com.rahulsgf.kafka_producer.services.KafkaProducerService@4d7ad07a"
+      },
+      "static": false,
+      "thread_id": 71
+    },
+    {
+      "elapsed": 0.05905646,
+      "event": "return",
+      "id": 4,
+      "parent_id": 3,
+      "thread_id": 71
+    },
+    {
+      "elapsed": 0.06281217,
+      "event": "return",
+      "id": 5,
+      "parent_id": 2,
+      "return_value": {
+        "class": "java.lang.String",
+        "object_id": 1378110522,
+        "value": "Message sent to Kafka successfully!"
+      },
+      "thread_id": 71
+    },
+    {
+      "elapsed": 0.07204219,
+      "event": "return",
+      "http_server_response": {
+        "headers": {
+          "Keep-Alive": "timeout=60",
+          "Connection": "keep-alive",
+          "Content-Length": "35",
+          "Date": "Mon, 14 Oct 2024 11:18:18 GMT",
+          "Content-Type": "text/plain;charset=UTF-8"
+        },
+        "status": 200
+      },
+      "id": 6,
+      "parent_id": 1,
+      "thread_id": 71
+    }
+  ],
+  "version": "1.2",
+  "metadata": {
+    "name": "POST /sendMessage (200) - 16:48:18.214",
+    "app": "kafka-producer",
+    "language": {
+      "name": "java",
+      "version": "21.0.1+12-LTS-29",
+      "engine": "Java HotSpot(TM) 64-Bit Server VM"
+    },
+    "client": {
+      "name": "appmap-java",
+      "url": "https://github.com/appland/appmap-java"
+    },
+    "recorder": {
+      "name": "request_recording",
+      "type": "requests"
+    },
+    "recording": {},
+    "git": {
+      "repository": "https://github.com/https-rahul/kafka-producer.git",
+      "branch": "tests-integration",
+      "commit": "c5d5245c0ab370a981bc0b16b25c7bd2e2b88f34"
+    }
+  },
+  "classMap": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "sendMessage",
+                          "type": "function",
+                          "static": false,
+                          "location": "kafka-producer/src/main/java/com/rahulsgf/kafka_producer/services/KafkaProducerService.java:15"
+                        }
+                      ],
+                      "name": "KafkaProducerService",
+                      "type": "class"
+                    }
+                  ],
+                  "name": "services",
+                  "type": "package"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "sendMessageToKafka",
+                          "type": "function",
+                          "static": false,
+                          "location": "kafka-producer/src/main/java/com/rahulsgf/kafka_producer/controller/KafkaController.java:19"
+                        }
+                      ],
+                      "name": "KafkaController",
+                      "type": "class"
+                    }
+                  ],
+                  "name": "controller",
+                  "type": "package"
+                }
+              ],
+              "name": "kafka_producer",
+              "type": "package"
+            }
+          ],
+          "name": "rahulsgf",
+          "type": "package"
+        }
+      ],
+      "name": "com",
+      "type": "package"
+    },
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "POST /sendMessage"
+        }
+      ]
+    }
+  ]
+}

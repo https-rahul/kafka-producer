@@ -1,0 +1,5 @@
+language: "java"
+name: "kafka-producer"
+appmap_dir: "tmp/appmap"
+packages:
+- path: "com.rahulsgf.kafka_producer"

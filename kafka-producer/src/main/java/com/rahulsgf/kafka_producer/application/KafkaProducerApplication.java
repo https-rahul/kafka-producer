@@ -1,10 +1,10 @@
-package com.rahulsgf.kafka_producer;
+package com.rahulsgf.kafka_producer.application;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.rahulsgf.kafka_producer"})
 @EnableScheduling
 public class KafkaProducerApplication {
 

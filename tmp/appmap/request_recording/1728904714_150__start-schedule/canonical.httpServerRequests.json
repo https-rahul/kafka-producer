@@ -1,0 +1,7 @@
+[
+  {
+    "route": "GET /start-schedule",
+    "parameters": "()",
+    "status": 200
+  }
+]

@@ -1,0 +1,180 @@
+{
+  "events": [
+    {
+      "event": "call",
+      "http_server_request": {
+        "headers": {
+          "postman-token": "080eedbf-5af9-48b5-bcd2-206fb9cbdcf0",
+          "host": "localhost:8080",
+          "connection": "keep-alive",
+          "cache-control": "no-cache",
+          "accept-encoding": "gzip, deflate, br",
+          "user-agent": "PostmanRuntime/7.42.0",
+          "accept": "*/*"
+        },
+        "normalized_path_info": "/stop-schedule",
+        "path_info": "/stop-schedule",
+        "protocol": "HTTP/1.1",
+        "request_method": "GET"
+      },
+      "id": 1,
+      "thread_id": 73
+    },
+    {
+      "defined_class": "com.rahulsgf.kafka_producer.controller.SchedulerController",
+      "event": "call",
+      "id": 2,
+      "lineno": 28,
+      "method_id": "stopMessageScheduler",
+      "path": "kafka-producer/src/main/java/com/rahulsgf/kafka_producer/controller/SchedulerController.java",
+      "receiver": {
+        "class": "com.rahulsgf.kafka_producer.controller.SchedulerController",
+        "object_id": 372448332,
+        "value": "com.rahulsgf.kafka_producer.controller.SchedulerController@16331c4c"
+      },
+      "static": false,
+      "thread_id": 73
+    },
+    {
+      "defined_class": "com.rahulsgf.kafka_producer.services.MessageScheduler",
+      "event": "call",
+      "id": 3,
+      "lineno": 44,
+      "method_id": "stopScheduler",
+      "path": "kafka-producer/src/main/java/com/rahulsgf/kafka_producer/services/MessageScheduler.java",
+      "receiver": {
+        "class": "com.rahulsgf.kafka_producer.services.MessageScheduler",
+        "object_id": 353332565,
+        "value": "com.rahulsgf.kafka_producer.services.MessageScheduler@150f6d55"
+      },
+      "static": false,
+      "thread_id": 73
+    },
+    {
+      "elapsed": 0.0000989,
+      "event": "return",
+      "id": 4,
+      "parent_id": 3,
+      "thread_id": 73
+    },
+    {
+      "elapsed": 0.0000989,
+      "event": "return",
+      "id": 5,
+      "parent_id": 2,
+      "return_value": {
+        "class": "java.lang.String",
+        "object_id": 1817450139,
+        "value": "Message scheduler stopped successfully!"
+      },
+      "thread_id": 73
+    },
+    {
+      "elapsed": 0.0000989,
+      "event": "return",
+      "http_server_response": {
+        "headers": {
+          "Keep-Alive": "timeout=60",
+          "Connection": "keep-alive",
+          "Content-Length": "39",
+          "Date": "Mon, 14 Oct 2024 11:18:44 GMT",
+          "Content-Type": "text/plain;charset=UTF-8"
+        },
+        "status": 200
+      },
+      "id": 6,
+      "parent_id": 1,
+      "thread_id": 73
+    }
+  ],
+  "version": "1.2",
+  "metadata": {
+    "name": "GET /stop-schedule (200) - 16:48:44.236",
+    "app": "kafka-producer",
+    "language": {
+      "name": "java",
+      "version": "21.0.1+12-LTS-29",
+      "engine": "Java HotSpot(TM) 64-Bit Server VM"
+    },
+    "client": {
+      "name": "appmap-java",
+      "url": "https://github.com/appland/appmap-java"
+    },
+    "recorder": {
+      "name": "request_recording",
+      "type": "requests"
+    },
+    "recording": {},
+    "git": {
+      "repository": "https://github.com/https-rahul/kafka-producer.git",
+      "branch": "tests-integration",
+      "commit": "c5d5245c0ab370a981bc0b16b25c7bd2e2b88f34"
+    }
+  },
+  "classMap": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "stopMessageScheduler",
+                          "type": "function",
+                          "static": false,
+                          "location": "kafka-producer/src/main/java/com/rahulsgf/kafka_producer/controller/SchedulerController.java:28"
+                        }
+                      ],
+                      "name": "SchedulerController",
+                      "type": "class"
+                    }
+                  ],
+                  "name": "controller",
+                  "type": "package"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "stopScheduler",
+                          "type": "function",
+                          "static": false,
+                          "location": "kafka-producer/src/main/java/com/rahulsgf/kafka_producer/services/MessageScheduler.java:44"
+                        }
+                      ],
+                      "name": "MessageScheduler",
+                      "type": "class"
+                    }
+                  ],
+                  "name": "services",
+                  "type": "package"
+                }
+              ],
+              "name": "kafka_producer",
+              "type": "package"
+            }
+          ],
+          "name": "rahulsgf",
+          "type": "package"
+        }
+      ],
+      "name": "com",
+      "type": "package"
+    },
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "GET /stop-schedule"
+        }
+      ]
+    }
+  ]
+}
